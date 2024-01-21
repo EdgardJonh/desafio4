@@ -23,8 +23,18 @@ body{
     align-items: center;
     color: white;
     font-size: large;
-    
+    animation: mover 2s infinite;
+    animation-direction: alternate;
 }
+@keyframes mover{
+    from{
+        transform: scale(100%);
+    }
+    to{
+        transform: scale(130%);
+    }
+}
+
 .menu ul li a{
     color: white;
     text-decoration: none;
@@ -39,7 +49,9 @@ body{
     margin: 0%;
     text-align: center;
 }
-
+.menu{
+    width: 100%;
+}
 .main {
     display: flex;
     flex-direction: column;
@@ -211,6 +223,9 @@ body{
             'footers'
         ;
     }
+    .menu{
+        width: auto;
+    }
     .card img{
         width: 68%;
     }
@@ -226,6 +241,9 @@ body{
         grid-template-columns: 1fr 1fr ;
         
         
+    }
+    .menu{
+        width:auto;
     }
     .pagination{
         display: none;
